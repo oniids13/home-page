@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif;
+}
+
+
+.bg-head {
+    height: 500px;
+    background-color: #074799;
+    transform: translateY(-200px) skewY(-5deg);
+    z-index: -1;
+    display: flex;
+}
+
+.prof-pic {
+    position: absolute; 
+    top: 80%; 
+    left: 40%;
+    transform: translate(-50%, -50%) skewY(5deg); 
+    z-index: 1; 
+}
+
+.pic {
+    max-height: 300px;
+}
+
+.about {
+    max-width: 400px;
+    background-color: whitesmoke;
+    position: absolute; 
+    top: 88%; 
+    right: 21%;
+    transform: translate(-50%, -50%) skewY(5deg); 
+    z-index: 1;
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 2px 2px slategray;
+}
+
+.icons {
+    align-self: flex-end;
+    padding-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+a:visited,
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
+}
+
+.portfolios {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+}
+
+.card {
+    max-width: 300px;
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+}
+
+.card-pic {
+    max-width: 300px;
+}
+
+.card-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.card-content {
+    padding: 10px 20px;
+}
+
+footer {
+    display: flex;
+    height: 40vh;
+    background-color: #074799;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 300px;
+}
+
+.left {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 300px;
+}
+
+.right img {
+    height: 300px;
+}
+
+.icons-bot a {
+    color: white;
+    padding-right: 10px;
+}
