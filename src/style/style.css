@@ -17,26 +17,38 @@ body {
     display: flex;
 }
 
+.profile-container {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    z-index: 1;
+    width: 100vw;
+}
+
 .prof-pic {
-    position: absolute; 
-    top: 80%; 
-    left: 40%;
-    transform: translate(-50%, -50%) skewY(5deg); 
-    z-index: 1; 
+    width: 300px;
+    height: 300px;
+    transform: skewY(5deg); 
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pic {
-    max-height: 300px;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .about {
     max-width: 400px;
     background-color: whitesmoke;
-    position: absolute; 
-    top: 88%; 
-    right: 21%;
-    transform: translate(-50%, -50%) skewY(5deg); 
-    z-index: 1;
+    transform: skewY(5deg); 
     padding: 20px; 
     display: flex;
     flex-direction: column;
@@ -117,4 +129,68 @@ footer {
 .icons-bot a {
     color: white;
     padding-right: 10px;
+}
+
+@media (max-width: 1024px)  {
+    .portfolios {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+    }
+
+    .profile-container {
+        gap: 15px;
+    }
+
+    .prof-pic, .about {
+        transform: skewY(5);
+    }
+
+    .about {
+        max-width: 40%;
+        padding: 15px;
+ 
+    }
+
+    footer {
+        gap: 50px;
+    }
+
+}
+
+@media(max-width: 500px) {
+    .portfolios {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-container {
+        flex-direction: column;
+    }
+
+    .about {
+        max-width: 80%;
+    }
+
+    .pic {
+        transform: scale(0.8);
+    }
+    .prof-pic {
+        transform: translateY(90px);
+        z-index: 0;
+    }
+    footer {
+        flex-direction: column;
+        gap: 0px;
+        height: 50vh;
+        padding: 10px;
+    }
+
+    .left {
+        max-width: 100%;
+        font-size: 15px;
+        gap: 5px;
+        
+    }
+
+    .right img{
+        transform: scale(0.7);
+    }
 }
